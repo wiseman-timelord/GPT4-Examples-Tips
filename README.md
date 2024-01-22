@@ -12,4 +12,4 @@ This guide is designed to assist users in effectively programming and debugging 
 3. Error Analysis and Function Updates: Analyze errors and update functions, using a structured approach for error interpretation and script adjustments.
 
 ### NOTATION
--  While minimal, I hope it inspires some insight, to what I have spent months doing, to, assist in and/or improve, peoples own AI programming techniques.
+-  While minimal, I hope it inspires some insight, to what I have spent months doing, to, assist in and/or improve upon, peoples own AI programming techniques.
