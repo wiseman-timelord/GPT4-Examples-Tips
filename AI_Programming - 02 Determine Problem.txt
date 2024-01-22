@@ -33,10 +33,4 @@ TakeProfit: 50
 StopLoss: 100
 TrailingStop: 20
 TrailingStep: 10
-RSI_Period: 14 
-RSI_Buy_Level: 30
-RSI_Sell_Level: 70 
-MA_Fast_Period: 5 
-MA_Slow_Period: 10 
-Bands_Period: 20 
-Bands_Deviation: 2.0 
+...Other Inputs
