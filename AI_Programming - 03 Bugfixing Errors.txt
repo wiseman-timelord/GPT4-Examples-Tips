@@ -1,0 +1,13 @@
+The following messages will have less and less detail, zeroing in on the core issues, ending in a debug scenario, so somewhere between, the level of detail in my last message and something like this...
+
+INFORMATION:
+We are bug-fixing.
+
+INSTRUCTION:
+Analyze, the ERRORS below and the relevant code in the RESOURCES, determine the best solutions, and then produce updates for the relevant functions, and for each function you update, then print the complete updated function(s).
+
+ERRORS:
+list of errors from compiler or output from shell.
+
+RESOURCES:
+relevant functions/scripts (less code is better results, but try to provide at least the full relevant functions).

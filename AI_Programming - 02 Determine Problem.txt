@@ -1,0 +1,42 @@
+This is the example of the themes of input I would use in the SECOND message, for the continuation of a session after solving a repeting issue in the previous session, however, the output from GPT4 will then be reviewed, and the content of the prompt will then be tailored to produce the correct form of input, emphesizing importance of certain parts and removing elements which confuse/distract the AI elsewhere, and then in the same input it is re-submitted, to improve the output. the size of the session is important, and improving the output from the ai, will inturn improve the focus of the session, which will in-turn improve the outcome.
+
+INFORMATION:
+In the previous session we developed some WIDE values for the external inputs for back-testing, these are shown below. The current problems are...
+- not opening trades, not even with wide values on external inputs as shown below, over periods of months.
+- some external variables are not being used correctly in back-testing, as they are not showing up in the debug info.
+...we need to figure out what is going on between the applicable , external variables and relating functions, that are not showing up in the debug info. as you can see below, not all of the debug shown in the OnInit is being displayed during back-testing...
+
+INSTRUCTION:
+1. Analyze and find, what variables not showing up in the Back-testing output.
+2. Analyze the functions relevant to the missing variables in the Back-testing output.
+3. Determine if there are any obvious issues with the logic in those relevant functions, that may be preventing them, from working correctly and/or using the relevant, as are applicable, inputs and/or variables, correctly.
+4. As required, produce additional debug info for the OnInit function, ensure to cover EVERYTHING we can possibly need in relevance to, A) the missing backtesting output (relating to the issues highlighted) and B) trades not opening.
+
+RESOURCES:
+the script from my first message in this session has the current source for the EA.
+
+BACK-TESTING OUTPUT:
+2024.01.22 17:00:11.904	2023.12.11 21:31:59   Current Values: RSI: 10.0, MA Fast: 11.0, MA Slow: 12.0
+2024.01.22 17:00:11.904	2023.12.11 21:31:59   Bollinger Bands Main: 13.0, Upper Band: 13.00002, Lower Band: 12.99998
+2024.01.22 17:00:11.904	2023.12.11 21:31:59   Current Close Price: 1.07658
+
+WIDE VALUES:
+MagicNumber: 12345
+CloseOnEndOfBar: true
+MaxOrders: 3 
+MaxSpread: 100 
+TimeFrame: PERIOD_M15
+TimePeriod: 1
+TradingSymbol: EURUSD
+RiskPercent: 10 
+TakeProfit: 50 
+StopLoss: 100
+TrailingStop: 20
+TrailingStep: 10
+RSI_Period: 14 
+RSI_Buy_Level: 30
+RSI_Sell_Level: 70 
+MA_Fast_Period: 5 
+MA_Slow_Period: 10 
+Bands_Period: 20 
+Bands_Deviation: 2.0 
