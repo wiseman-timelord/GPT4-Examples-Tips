@@ -7,15 +7,15 @@ INSTRUCTION:
 Please analyze the, functions and logic, (optional: and then produce a short description) for the script.
 
 RESOURCE:
-**YourScriptGoesHere**
+**YourScript/FunctionGoesHere**
 
 OR
 
 RESOURCE:
-# Script: Script1Name
+# Script: Script1/Function1Name
 
 RESOURCE:
-# Script: Script2Name
+# Script: Script2/Function2Name
 
 RESOURCE:
 etc
