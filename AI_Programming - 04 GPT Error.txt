@@ -1,0 +1,341 @@
+# Detailed example of when you would not continue, but instead re-submit. This is when GPT produces incorrect output, and how to fix it, its DETAILED (look for the lines of stars).
+
+
+*******************************************************
+
+*** We have an issue with our program, you think you have provided everything...
+
+
+
+ok, however, here you can see I have altered all the menu items...
+
+  ____       _   _     ____      _     ____            _
+ | __ )  ___| |_| |__ |  _ \  __| |___/ ___|  ___ ___ | | ___
+ |  _ \ / _ \ __|  _ \| | | |/ _  / __\___ \ / __/ _ \| |/ _ \
+ | |_) |  __/ |_| | | | |_| | (_| \__ \___) | (_| (_| | |  __/
+ |____/ \___|\__|_| |_|____/ \__,_|___/____/ \___\__,_|_|\___|
+
+======================( BethDdsScale-Ps )======================
+
+             ---( Pre-Processing Configuration )---
+
+                    1. Data Folder Location
+  F:\Fallout 4\Data
+
+                  2. Textures\Actors\Character
+                            Ignore
+
+                    3. Max Image Resolution
+                          RATIOx512
+
+                     4. Graphics Processor
+                  AMD Radeon HD 7800 Series
+
+                   5. Multi-Thread Archiving
+                         Multi-Thread
+
+
+---------------------------------------------------------------
+Select, Menu Options=1-5, Begin Resizing=B, Exit Program=X:
+
+...however, the psd1 remains un-altered...
+
+@{
+    DataFolderLocation = "C:\Program Files (x86)\Steam\steamapps\common\Fallout 4\data"
+    ProcessCharacterTextures = $true
+    TargetResolution = "1024"
+	ArchiveMultithreading = $true
+    GpuCardSelectionNumber = "0"
+    UserCurrentHighScore = "0"
+    UserPreviousScore = "0"
+    UserCurrentLowScore = "0"
+}
+
+...the scripts produce no menus getting to the menu, however, in the process of changing each of the options once, it produces these errors...
+
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:11
+Line |
+  11 |          $Global:Config | Export-PowerShellDataFile -Path ".\scripts\c .
+     |                           ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:11
+Line |
+  11 |          $Global:Config | Export-PowerShellDataFile -Path ".\scripts\c .
+     |                           ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:25
+Line |
+  25 |      $Global:Config | Export-PowerShellDataFile -Path ".\scripts\confi .
+     |                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:34
+Line |
+  34 |      $Global:Config | Export-PowerShellDataFile -Path ".\scripts\confi .
+     |                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:34
+Line |
+  34 |      $Global:Config | Export-PowerShellDataFile -Path ".\scripts\confi .
+     |                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:43
+Line |
+  43 |      $Global:Config | Export-PowerShellDataFile -Path ".\scripts\confi .
+     |                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:18
+Line |
+  18 |      $Global:Config | Export-PowerShellDataFile -Path ".\scripts\confi .
+     |                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+     | The term 'Export-PowerShellDataFile' is not recognized
+     | as a name of a cmdlet, function, script file, or
+     | executable program. Check the spelling of the name, or
+     | if a path was included, verify that the path is correct
+     | and try again.
+
+...here is the file structure, if you wish to check things are in the correct locations, but seems as I am providing this, do not mention files may be in the wrong places, instead check this...
+
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11>dir /b/s
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\BethDdsScale-Ps.Bat
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\binaries
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\cache
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\License.Txt
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\main.ps1
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\Setup-Install.Bat
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\binaries\BSArch64.exe
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\binaries\texconv.exe
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\binaries\texdiag.exe
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\artwork.ps1
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\configuration.psd1
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1
+D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\processing.ps1
+
+...here is the updated main script, you have the source for the other scripts in my first message, remember use the script below as the source for main...
+
+# Script: main.ps1
+
+# Variables
+$Global:Config = Import-PowerShellDataFile -Path ".\scripts\configuration.psd1"
+$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$Global:ToolsDirectory = $scriptPath
+$Global:BinDirectory = Join-Path $scriptPath "binaries"
+$Global:BSArch64Executable = Join-Path $Global:BinDirectory "BSArch64.exe"
+$Global:TexConvExecutable = Join-Path $Global:BinDirectory "texconv.exe"
+$Global:TexDiagExecutable = Join-Path $Global:BinDirectory "texdiag.exe"
+$Global:CacheDirectory = Join-Path $scriptPath "cache"
+$Global:DataDirectory = $Global:Config.DataFolderLocation
+$Global:SelectedGPU = $Global:Config.GpuCardSelectionNumber
+$Global:UseMultithreading = $Global:Config.ArchiveMultithreading
+$Global:ProcessCharacterTextures = $Global:Config.ProcessCharacterTextures
+$Global:AvailableResolutions = @(512, 1024, 2048)
+$Global:TargetResolution = 1024  
+$Global:SelectedGPU = 0  
+$Global:ProcessingStartTime = $null
+$Global:ProcessingEndTime = $null
+$Global:FilesProcessed = 0
+$Global:FilesPassed = 0
+$Global:PreviousDataSize = 0
+$Global:ResultingDataSize = 0
+
+# Imports
+. ".\scripts\processing.ps1"
+. ".\scripts\preferences.ps1"
+. ".\scripts\artwork.ps1"
+
+# Function Show Configurationmenu
+function Show-ConfigurationMenu {
+    do {
+        Clear-Host
+        Show-AsciiArt
+        Show-Title
+        Write-Host "             ---( Pre-Processing Configuration )---`n"
+        Write-Host "                    1. Data Folder Location"
+        Write-Host "  $($Global:DataDirectory)`n"
+        Write-Host "                  2. Textures\Actors\Character"
+        $charTextureStatus = if ($Global:ProcessCharacterTextures) { "Process" } else { "Ignore" }
+        Write-Host "                            $charTextureStatus`n"
+        Write-Host "                    3. Max Image Resolution"
+        Write-Host "                          RATIOx$($Global:TargetResolution)`n"
+        Write-Host "                     4. Graphics Processor"
+        if ($Global:GpuList.Count -gt 0) {
+            $currentGpuDisplay = $Global:GpuList[$Global:SelectedGPU].Split(':')[1].Trim()
+        } else {
+            $currentGpuDisplay = "No GPU Found"
+        }
+        Write-Host "                  $currentGpuDisplay`n"
+        $archiveMultiThreadStatus = if ($Global:ArchiveMultithreading) { "Multi-Thread" } else { "Single-Thread" }
+        Write-Host "                   5. Multi-Thread Archiving"
+        Write-Host "                         $archiveMultiThreadStatus`n`n"
+        Show-Divider
+        $choice = Read-Host "Select, Menu Options=1-5, Begin Resizing=B, Exit Program=X"
+        switch ($choice) {
+            "1" { Update-DataFolderLocation }
+            "2" { Toggle-CharacterTextures }
+            "3" { Toggle-ImageResolution }
+            "4" { Toggle-GPUSelection }
+            "5" { Toggle-ArchiveMultithreading }
+            "B" { InitiateTextureProcessing $Global:TargetResolution; break }
+            "X" { Write-Host "Exiting..."; return }
+            default { Write-Host "Invalid option, please try again" }
+        }
+    } while ($true)
+}
+
+
+# Function Displaysummaryscreen
+function DisplaySummaryScreen {
+    $processingTime = $Global:ProcessingEndTime - $Global:ProcessingStartTime
+    $processingTimeFormatted = "{0:HH:mm}" -f [datetime]$processingTime.TotalSeconds
+    $dataSaved = $Global:PreviousDataSize - $Global:ResultingDataSize
+    $percentReduction = [math]::Round(($dataSaved / $Global:PreviousDataSize) * 100, 2)
+    $score = CalculateScore -texturesProcessed $Global:FilesProcessed -processingTime $processingTime
+    $verdict = "Average Score!"
+    if ($score -gt $Global:Config.UserCurrentHighScore) {
+        $Global:Config.UserCurrentHighScore = $score
+        $verdict = "New HighScore!"
+    }
+    elseif ($score -lt $Global:Config.UserCurrentLowScore -or $Global:Config.UserCurrentLowScore -eq 0) {
+        $Global:Config.UserCurrentLowScore = $score
+        $verdict = "New LowScore!"
+    }
+	Clear-Host
+	Show-AsciiArt
+    Show-Title
+    Write-Host "             ---( Pre-Processing Configuration )---`n"
+    Write-Host "                     ---( Final Summary )---"
+    Write-Host "Processing Stats:"
+    Write-Host "Start: $($Global:ProcessingStartTime.ToString('HH:mm')), Duration: $processingTimeFormatted"
+    Write-Host "Processed: $($Global:FilesProcessed), Passed: $($Global:FilesPassed)"
+    Write-Host "Saved: $($dataSaved) MB, Reduction: $percentReduction%"
+    Write-Host "`nResulting Scores:"
+    Write-Host "Current: $score, Previous: $($Global:Config.UserPreviousScore)"
+    Write-Host "Highest: $($Global:Config.UserCurrentHighScore), Lowest: $($Global:Config.UserCurrentLowScore)"
+    Write-Host "`nVerdict:"
+    Write-Host "$verdict"
+    Show-Divider
+    Write-Host "`nSelect, Exit Program=X, Error Log=E"
+    $choice = Read-Host "Select"
+    switch ($choice) {
+        "X" { Write-Host "Exiting..."; return }
+        "E" {
+            if (Test-Path ".\Errors-Crash.Log") {
+                Get-Content ".\Errors-Crash.Log" | Out-Host
+            } else {
+                Write-Host "Error log file does not exist."
+            }
+        }
+        default { Write-Host "Invalid option, please try again"; DisplaySummaryScreen }
+    }
+}
+
+# Entry Point
+Set-Location -Path $scriptPath
+$Global:GpuList = Get-GPUList
+Show-ConfigurationMenu
+
+...determine where the issue may be, determine the best solutions to fix the highlighted issues, and produce updates for the applicable scripts...
+
+
+
+*************************************************************
+
+*** To which it says...
+
+
+
+The errors you're encountering are related to the `Export-PowerShellDataFile` cmdlet, which is not recognized. This could be due to several reasons, including the version of PowerShell you are using or the environment setup. Let's address this and provide solutions:
+
+### Issue: `Export-PowerShellDataFile` Cmdlet Not Recognized
+
+1. **PowerShell Version**: The `Export-PowerShellDataFile` cmdlet is available in Windows PowerShell 5.1 and later versions. Ensure you are running a compatible version. You can check your PowerShell version using `$PSVersionTable.PSVersion`.
+
+2. **Alternative Cmdlet**: If upgrading PowerShell is not feasible, or if the cmdlet is still not recognized, you can use an alternative approach to update the PSD1 file.
+
+### Solution: Alternative Method to Update PSD1 File
+
+Replace the use of `Export-PowerShellDataFile` with a custom function to manually update the PSD1 file. Here's an example of how you can implement this:
+
+```powershell
+function Update-ConfigurationFile {
+    param (
+        [string]$Path,
+        [hashtable]$Config
+    )
+    $content = "@{`n" + ($Config.GetEnumerator() | ForEach-Object { "`t$($_.Key) = `"$($_.Value)`"" }) -join "`n" + "`n}"
+    Set-Content -Path $Path -Value $content
+}
+```
+
+Use this function instead of `Export-PowerShellDataFile` in your `preferences.ps1` script. For example:
+
+```powershell
+# In preferences.ps1, replace lines like
+# $Global:Config | Export-PowerShellDataFile -Path ".\scripts\configuration.psd1"
+# with
+Update-ConfigurationFile -Path ".\scripts\configuration.psd1" -Config $Global:Config
+```
+
+### Applying the Fix
+
+1. **Add the `Update-ConfigurationFile` Function**: Add this function to a script where it can be commonly accessed, such as at the beginning of your `main.ps1` or in a separate utilities script that you include in your main script.
+
+2. **Update `preferences.ps1`**: Replace all instances of `Export-PowerShellDataFile` with calls to `Update-ConfigurationFile`, ensuring the correct path and `$Global:Config` are passed.
+
+3. **Check for Other Occurrences**: Ensure that any other script that might be using `Export-PowerShellDataFile` is also updated accordingly.
+
+By implementing these changes, you should be able to resolve the errors and have the configurations correctly updated in your `configuration.psd1` file. Remember to test these changes thoroughly to ensure they work as expected in your environment.
+
+
+
+
+*************************************************************
+
+*** However, you are running the script in PowerShellCore 7.4, and otherwise I have Powershell 5.1...clearly it is wrong, and if we continued, it would loose some of the context of the massive amount of data, that I have just spent AGES putting together. The solution is to edit the previous submission, and then re-submit...In this case you could run, "$PSVersionTable.PSVersion" or "Get-Host | Select-Object Version", to get the versions in both a powershell and powershell core window, and then, not just state it, as it will doubt you, but if you paste the output, it will know thats the actual output from running the command, and so you would add something like this the the previous submission you just made, yes even though there is then a lot of data, and if it misses this, then in this specific case you would definately re-generate the response until it get it...
+
+...here are my powershell versions...
+
+(powershell)
+PS C:\Windows\system32> Get-Host | Select-Object Version
+Version
+-------
+5.1.19041.1
+
+(PowerShellCore)
+PS C:\Users\*username*> Get-Host | Select-Object Version
+Version
+-------
+7.4.0
+
+
+
+*********************************************************
+
+We will then review the output, and if it comes out with non-sense again, then we will figure out how to assure that is not the case, and by eliminating the non-sense from the output, we will then have pure output free of non-sense, that we will then work with, and satisfy any more of its mis-understanding, until the problem is solved. Through this method we channel the output from diverse possibilities into the few remaining solutions...however...after persuing these possibilities, if it is still wrong, then we go back, to this what we thought was "pure output", and we have 2 options, we can "re-generate" or we can tell it to "produce research, find articles where people have found solutions to the same themes of issues, and determing the correct solution", after producing research, if it is unable to determine the correct solution, go back to your message after the research, and then tell it "produce further research", likely it will get it in 2 research, unless there is very little information available on the issue....
+
+*takes a bow*
+
