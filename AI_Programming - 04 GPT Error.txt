@@ -317,7 +317,7 @@ By implementing these changes, you should be able to resolve the errors and have
 
 *** However, you are running the script in PowerShellCore 7.4, and otherwise I have Powershell 5.1...clearly it is wrong, and if we continued, it would loose some of the context of the massive amount of data, that I have just spent AGES putting together. The solution is to edit the previous submission, and then re-submit...In this case you could run, "$PSVersionTable.PSVersion" or "Get-Host | Select-Object Version", to get the versions in both a powershell and powershell core window, and then, not just state it, as it will doubt you, but if you paste the output, it will know thats the actual output from running the command, and so you would add something like this the the previous submission you just made, yes even though there is then a lot of data, and if it misses this, then in this specific case you would definately re-generate the response until it get it...
 
-...here are my powershell versions...
+...I am running it in PowerShellCore 7.4, here are my powershell versions...
 
 (powershell)
 PS C:\Windows\system32> Get-Host | Select-Object Version
@@ -335,7 +335,4 @@ Version
 
 *********************************************************
 
-We will then review the output, and if it comes out with non-sense again, then we will figure out how to assure that is not the case, and by eliminating the non-sense from the output, we will then have pure output free of non-sense, that we will then work with, and satisfy any more of its mis-understanding, until the problem is solved. Through this method we channel the output from diverse possibilities into the few remaining solutions...however...after persuing these possibilities, if it is still wrong, then we go back, to this what we thought was "pure output", and we have 2 options, we can "re-generate" or we can tell it to "produce research, find articles where people have found solutions to the same themes of issues, and determing the correct solution", after producing research, if it is unable to determine the correct solution, go back to your message after the research, and then tell it "produce further research", likely it will get it in 2 research, unless there is very little information available on the issue....
-
-*takes a bow*
-
+To which it told me the Cmdlet is not available in Powershell Core, hence, we now straight away had the beginnings of a solution...but in general we will then review the output, and if it comes out with non-sense again, then we will figure out how to assure that is not the case, and by eliminating the non-sense from the output, we will then have pure output free of non-sense, that we will then work with, and satisfy any more of its mis-understanding, until the problem is solved. Through this method we channel the output from diverse possibilities into the few remaining solutions...however...after persuing these possibilities, if it is still wrong, then we go back, to this what we thought was "pure output", and we have 2 options, we can "re-generate" or we can tell it to "produce research, find articles where people have found solutions to the same themes of issues, and determing the correct solution", after producing research, if it is unable to determine the correct solution, go back to your message after the research, and then tell it "produce further research", likely it will get it in 2 research, unless there is very little information available on the issue....
