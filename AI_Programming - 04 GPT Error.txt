@@ -51,7 +51,7 @@ Select, Menu Options=1-5, Begin Resizing=B, Exit Program=X:
     UserCurrentLowScore = "0"
 }
 
-...the scripts produce no menus getting to the menu, however, in the process of changing each of the options once, it produces these errors...
+...the scripts produce no errors getting to the menu, however, in the process of changing each of the options once, it produces these errors...
 
 Export-PowerShellDataFile: D:\GameTools\BethDdsScale-Ps\BethDdsScale-Ps v0.11\scripts\preferences.ps1:11
 Line |
